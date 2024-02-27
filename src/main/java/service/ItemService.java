@@ -21,8 +21,8 @@ public class ItemService {
 		this.repo = repo;
 	}
 
-	public ResponseEntity<Item> createItem(Item newItems) {
-		Item created = this.repo.save(newItems);
+	public ResponseEntity<Item> createItem(Item newItem) {
+		Item created = this.repo.save(newItem);
 		return new ResponseEntity<Item>(created, HttpStatus.CREATED);
 
 	}
