@@ -1,4 +1,4 @@
-package rest;
+package com.LBG.rest;
 
 import java.util.List;
 
@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.LBG.domain.Cart;
 import com.LBG.domain.Item;
-
-import service.CartService;
+import com.LBG.service.CartService;
 
 @RestController
 @RequestMapping("/cart")

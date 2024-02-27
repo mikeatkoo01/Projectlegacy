@@ -1,4 +1,4 @@
-package service;
+package com.LBG.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,8 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.LBG.domain.Cart;
-
-import repo.CartRepo;
+import com.LBG.repo.CartRepo;
 
 @Service
 public class CartService {

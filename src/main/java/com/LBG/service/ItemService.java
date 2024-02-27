@@ -1,4 +1,4 @@
-package service;
+package com.LBG.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,8 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.LBG.domain.Item;
-
-import repo.ItemRepo;
+import com.LBG.repo.ItemRepo;
 
 @Service
 public class ItemService {

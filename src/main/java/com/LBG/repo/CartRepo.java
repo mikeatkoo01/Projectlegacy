@@ -1,4 +1,4 @@
-package repo;
+package com.LBG.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
