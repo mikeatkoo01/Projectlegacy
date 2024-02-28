@@ -2,6 +2,7 @@ package com.LBG.rest;
 
 import java.util.List;
 
+import org.apache.catalina.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,47 +14,46 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.LBG.domain.Item;
-import com.LBG.service.ItemService;
+import com.LBG.service.UserService;
 
 @RestController
-@RequestMapping("/item")
+@RequestMapping("/User")
 @CrossOrigin
-public class ItemController {
+public class UserController {
 
-	private ItemService service;
+	private UserService service;
 
-	public ItemController(ItemService service) {
+	public UserController(UserService service) {
 		super();
 		this.service = service;
 	}
 
 	@PostMapping("/create")
-	public ResponseEntity<Item> createItem(@RequestBody Item newItem) {
+	public ResponseEntity<User> createUser(@RequestBody User newUser) {
 
-		return this.service.createItem(newItem);
+		return this.service.createUser(newUser);
 	}
 
-	// read all
-	@GetMapping("/read")
-	public List<Item> getItem() {
-		return this.service.getItem();
+	@GetMapping("/Users")
+	public List<User> getItem() {
+		return this.service.getUser();
+
 	}
 
-	@GetMapping("/get/{id}")
-	public ResponseEntity<Item> getItemById(@PathVariable int id) {
-		return this.service.getItemById(id);
+	@GetMapping("/Users/{id}")
+	public ResponseEntity<User> getItemById(@PathVariable int id) {
+		return this.service.getUserById(id);
 
 	}
 
 	@PutMapping("update/{id}")
-	public ResponseEntity<Item> updateItem(@PathVariable int id, Item newItem) {
-		return this.service.updateItem(id, newItem);
+	public ResponseEntity<User> updateItem(@PathVariable int id, User newUser) {
+		return this.service.updateUser(id, newUser);
 	}
 
 	@DeleteMapping("delete/{id}")
-	public boolean deleteItem(@PathVariable int id) {
-		return this.service.deleteItem(id);
+	public boolean deleteUser(@PathVariable int id) {
+		return this.service.deleteUser(id);
 
 	}
 
