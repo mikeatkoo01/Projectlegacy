@@ -1,4 +1,4 @@
-package com.LBG.jalal;
+package com.LBG;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
