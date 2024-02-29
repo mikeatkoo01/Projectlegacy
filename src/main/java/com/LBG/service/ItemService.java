@@ -37,7 +37,6 @@ public class ItemService {
 			return new ResponseEntity<Item>(HttpStatus.NOT_FOUND);
 		}
 
-		// attempts to pull the contents out of the box
 		Item body = found.get();
 
 		return ResponseEntity.ok(body);
