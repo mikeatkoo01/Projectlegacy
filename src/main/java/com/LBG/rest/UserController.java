@@ -34,24 +34,24 @@ public class UserController {
 		return this.service.createUser(newUser);
 	}
 
-	@GetMapping("/Users")
-	public List<User> getItem() {
+	@GetMapping("/read")
+	public List<User> getUser() {
 		return this.service.getUser();
 
 	}
 
-	@GetMapping("/Users/{id}")
-	public ResponseEntity<User> getItemById(@PathVariable int id) {
+	@GetMapping("/read/{id}")
+	public ResponseEntity<User> getUserById(@PathVariable int id) {
 		return this.service.getUserById(id);
 
 	}
 
-	@PutMapping("update/{id}")
-	public ResponseEntity<User> updateItem(@PathVariable int id, User newUser) {
+	@PutMapping("/update/{id}")
+	public ResponseEntity<User> updateUser(@PathVariable int id, User newUser) {
 		return this.service.updateUser(id, newUser);
 	}
 
-	@DeleteMapping("delete/{id}")
+	@DeleteMapping("/delete/{id}")
 	public boolean deleteUser(@PathVariable int id) {
 		return this.service.deleteUser(id);
 

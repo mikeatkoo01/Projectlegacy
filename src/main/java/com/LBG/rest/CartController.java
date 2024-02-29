@@ -52,7 +52,7 @@ public class CartController {
 //	}
 //	
 
-	@DeleteMapping("delete/{id}")
+	@DeleteMapping("/delete/{id}")
 	public boolean deleteCartItem(@PathVariable int id) {
 		return this.service.deleteCartItem(id);
 	}

@@ -15,6 +15,10 @@ public class Cart {
 
 	private boolean inCart = true;
 
+//	@JsonManagedReference(value = "for-item")
+//	@OneToMany(mappedBy = "cart")
+//	private List<Item> item;
+
 	public Cart() {
 		super();
 		// TODO Auto-generated constructor stub

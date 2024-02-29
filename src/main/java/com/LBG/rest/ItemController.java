@@ -46,12 +46,12 @@ public class ItemController {
 
 	}
 
-	@PutMapping("update/{id}")
+	@PutMapping("/update/{id}")
 	public ResponseEntity<Item> updateItem(@PathVariable int id, Item newItem) {
 		return this.service.updateItem(id, newItem);
 	}
 
-	@DeleteMapping("delete/{id}")
+	@DeleteMapping("/delete/{id}")
 	public boolean deleteItem(@PathVariable int id) {
 		return this.service.deleteItem(id);
 
