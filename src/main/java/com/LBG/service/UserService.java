@@ -5,10 +5,11 @@ import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import com.LBG.domain.User;
 import com.LBG.repo.UserRepo;
-
+@Service
 public class UserService {
 
 	private UserRepo repo;
