@@ -27,14 +27,8 @@ public class UserController {
 		this.service = service;
 	}
 
-	public UserController() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@RequestBody User newUser) {
-
 		return this.service.createUser(newUser);
 	}
 
