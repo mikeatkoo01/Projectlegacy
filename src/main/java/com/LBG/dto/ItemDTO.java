@@ -1,5 +1,5 @@
 package com.LBG.dto;
 
-public class CartDTO {
+public class ItemDTO {
 
 }
