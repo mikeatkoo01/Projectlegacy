@@ -16,7 +16,7 @@ public class Item {
 
 	private Integer id;
 
-	private String uploadImages;
+//	private String uploadImages;
 
 	private String name;
 
@@ -24,8 +24,9 @@ public class Item {
 
 	private Integer quantity;
 
-	@JsonManagedReference(value = "for-cart")
+	@JsonManagedReference
 	@ManyToOne
+
 	private Cart cart;
 
 	public Item() {
@@ -50,16 +51,16 @@ public class Item {
 	/**
 	 * @return the uploadImages
 	 */
-	public String getUploadImages() {
-		return uploadImages;
-	}
-
-	/**
-	 * @param uploadImages the uploadImages to set
-	 */
-	public void setUploadImages(String uploadImages) {
-		this.uploadImages = uploadImages;
-	}
+//	public String getUploadImages() {
+//		return uploadImages;
+//	}
+//
+//	/**
+//	 * @param uploadImages the uploadImages to set
+//	 */
+//	public void setUploadImages(String uploadImages) {
+//		this.uploadImages = uploadImages;
+//	}
 
 	/**
 	 * @return the name

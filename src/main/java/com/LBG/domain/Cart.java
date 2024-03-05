@@ -2,7 +2,7 @@ package com.LBG.domain;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -18,9 +18,9 @@ public class Cart {
 
 	private Integer id;
 
-	private boolean inCart = true;
+//	private boolean inCart = true;
 
-	@JsonManagedReference(value = "for-item")
+	@JsonBackReference
 	@OneToMany(mappedBy = "cart")
 	private List<Item> item;
 
@@ -61,15 +61,5 @@ public class Cart {
 	/**
 	 * @return the inCart
 	 */
-	public boolean isInCart() {
-		return inCart;
-	}
-
-	/**
-	 * @param inCart the inCart to set
-	 */
-	public void setInCart(boolean inCart) {
-		this.inCart = inCart;
-	}
 
 }
