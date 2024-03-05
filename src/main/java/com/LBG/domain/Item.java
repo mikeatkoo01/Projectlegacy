@@ -1,9 +1,14 @@
 package com.LBG.domain;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Item {
@@ -13,11 +18,17 @@ public class Item {
 
 	private Integer id;
 
+	private String uploadImages;
+
 	private String name;
 
 	private Double price;
 
 	private Integer quantity;
+
+	@JsonManagedReference(value = "for-cart")
+	@ManyToOne
+	private List<Cart> cart;
 
 	public Item() {
 		super();
