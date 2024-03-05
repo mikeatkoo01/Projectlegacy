@@ -38,6 +38,20 @@ public class Cart {
 	}
 
 	/**
+	 * @return the item
+	 */
+	public List<Item> getItem() {
+		return item;
+	}
+
+	/**
+	 * @param item the item to set
+	 */
+	public void setItem(List<Item> item) {
+		this.item = item;
+	}
+
+	/**
 	 * @param id the id to set
 	 */
 	public void setId(Integer id) {

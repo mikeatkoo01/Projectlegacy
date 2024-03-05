@@ -1,7 +1,5 @@
 package com.LBG.domain;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Entity;
@@ -28,7 +26,7 @@ public class Item {
 
 	@JsonManagedReference(value = "for-cart")
 	@ManyToOne
-	private List<Cart> cart;
+	private Cart cart;
 
 	public Item() {
 		super();
@@ -47,6 +45,20 @@ public class Item {
 	 */
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	/**
+	 * @return the uploadImages
+	 */
+	public String getUploadImages() {
+		return uploadImages;
+	}
+
+	/**
+	 * @param uploadImages the uploadImages to set
+	 */
+	public void setUploadImages(String uploadImages) {
+		this.uploadImages = uploadImages;
 	}
 
 	/**
@@ -89,6 +101,20 @@ public class Item {
 	 */
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
+	}
+
+	/**
+	 * @return the cart
+	 */
+	public Cart getCart() {
+		return cart;
+	}
+
+	/**
+	 * @param cart the cart to set
+	 */
+	public void setCart(Cart cart) {
+		this.cart = cart;
 	}
 
 }
