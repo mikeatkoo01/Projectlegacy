@@ -24,7 +24,7 @@ public class Item {
 	private Double price;
 
 	private Integer quantity;
-
+//no value = required and no dto required!!!!
 	@JsonBackReference
 	@ManyToOne
 	private Cart cart;
