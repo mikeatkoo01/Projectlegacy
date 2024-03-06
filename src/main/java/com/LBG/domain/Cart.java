@@ -18,9 +18,9 @@ public class Cart {
 
 	private Integer id;
 
-	private boolean inCart = true;
+//	private boolean inCart = true;
 
-	@JsonManagedReference(value = "for-item")
+	@JsonManagedReference
 	@OneToMany(mappedBy = "cart")
 	private List<Item> item;
 
@@ -35,6 +35,13 @@ public class Cart {
 	 */
 	public Integer getId() {
 		return id;
+	}
+	
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	/**
@@ -51,25 +58,20 @@ public class Cart {
 		this.item = item;
 	}
 
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(Integer id) {
-		this.id = id;
-	}
+	
 
 	/**
 	 * @return the inCart
 	 */
-	public boolean isInCart() {
-		return inCart;
-	}
-
-	/**
-	 * @param inCart the inCart to set
-	 */
-	public void setInCart(boolean inCart) {
-		this.inCart = inCart;
-	}
+//	public boolean isInCart() {
+//		return inCart;
+//	}
+//
+//	/**
+//	 * @param inCart the inCart to set
+//	 */
+//	public void setInCart(boolean inCart) {
+//		this.inCart = inCart;
+//	}
 
 }

@@ -1,5 +1,6 @@
 package com.LBG.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Entity;
@@ -23,8 +24,8 @@ public class Item {
 	private Double price;
 
 	private Integer quantity;
-
-	@JsonManagedReference(value = "for-cart")
+//no value = required and no dto required!!!!
+	@JsonBackReference
 	@ManyToOne
 	private Cart cart;
 

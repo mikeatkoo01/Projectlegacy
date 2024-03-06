@@ -62,6 +62,9 @@ public class ItemService {
 
 		if (newItem.getQuantity() != null)
 			existing.setQuantity(newItem.getQuantity());
+		
+		if(newItem.getUploadImages()!=null)
+			existing.setUploadImages(newItem.getUploadImages());
 
 		Item updated = this.repo.save(existing);
 
