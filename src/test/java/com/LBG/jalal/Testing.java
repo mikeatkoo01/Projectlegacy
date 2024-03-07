@@ -49,7 +49,7 @@ public class Testing {
 		passWordReg.sendKeys("atkoo");
 
 		WebElement clickSubmit = this.driver.findElement(By.cssSelector("#root > header > div > form > button"));
-		passWordReg.click();
+		clickSubmit.click();
 
 	}
 
