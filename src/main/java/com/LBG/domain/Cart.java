@@ -1,9 +1,14 @@
 package com.LBG.domain;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Cart {
@@ -13,8 +18,13 @@ public class Cart {
 
 	private Integer id;
 
-	private boolean inCart = true;
+//	private boolean inCart = true;
 
+	@JsonManagedReference
+	@OneToMany(mappedBy = "cart")
+	private List<Item> item;
+
+//
 	public Cart() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -35,17 +45,31 @@ public class Cart {
 	}
 
 	/**
-	 * @return the inCart
+	 * @return the item
 	 */
-	public boolean isInCart() {
-		return inCart;
+	public List<Item> getItem() {
+		return item;
 	}
 
 	/**
-	 * @param inCart the inCart to set
+	 * @param item the item to set
 	 */
-	public void setInCart(boolean inCart) {
-		this.inCart = inCart;
+	public void setItem(List<Item> item) {
+		this.item = item;
 	}
+
+	/**
+	 * @return the inCart
+	 */
+//	public boolean isInCart() {
+//		return inCart;
+//	}
+//
+//	/**
+//	 * @param inCart the inCart to set
+//	 */
+//	public void setInCart(boolean inCart) {
+//		this.inCart = inCart;
+//	}
 
 }

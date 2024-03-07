@@ -1,9 +1,12 @@
 package com.LBG.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Item {
@@ -18,6 +21,10 @@ public class Item {
 	private Double price;
 
 	private Integer quantity;
+
+	@JsonBackReference
+	@ManyToOne
+	private Cart cart;
 
 	public Item() {
 		super();
