@@ -49,8 +49,11 @@ public class ItemService {
 		if (found.isEmpty()) {
 			return new ResponseEntity<Item>(HttpStatus.NOT_FOUND);
 		}
-
+		 
+	    
 		Item existing = found.get();
+		
+		
 
 		if (newItem.getName() != null) {
 			existing.setName(newItem.getName());
